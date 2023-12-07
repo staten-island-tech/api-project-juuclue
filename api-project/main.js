@@ -1,7 +1,7 @@
 import './style.css'
 
 
-const URL = `https://api.genshin.dev/`;
+const URL = `https://emojihub.yurace.pro/api/all`;
 
 
  async function getData(URL){
@@ -13,12 +13,14 @@ const URL = `https://api.genshin.dev/`;
             throw new Error(response.statusText);
         }
 
-        const data = await response.json();
-        document.querySelector("h1").textContent = data.content;
+        const lala = await response.json();
+        document.querySelector(".container").textContent = lala.data;
+        console.log(lala);
+        console.log(lala.data.name);
 
     } catch (error) {
-        console.log(error, "uh oh");
-        document.querySelector("h1").textContent ="baii";
+        console.log("error", "uh oh");
+        document.querySelector(".container").textContent ="baii";
     }
 }
 getData(URL); 
