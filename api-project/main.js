@@ -1,10 +1,11 @@
-import './style.css'
+import '../styles/style.css';
 
 
-const URL = `https://emojihub.yurace.pro/api/all`;
+ const URL = `https://valorant-api.com/v1/agents`;
+ 
 
 
- async function getData(URL){
+  async function getData(URL){
     try {
         //requesiton a reseponse REST API's
         const response = await fetch(URL);
@@ -18,10 +19,23 @@ const URL = `https://emojihub.yurace.pro/api/all`;
         console.log(lala);
         console.log(lala.data.name);
 
-    } catch (error) {
-        console.log("error", "uh oh");
+    } catch(error) {
+        console.log("error, uh oh");
         document.querySelector(".container").textContent ="baii";
     }
+
 }
-getData(URL); 
+getData(URL);  
+
+/* async function getData() {
+  let res = await fetch(
+
+    "https://emojihub.yurace.pro/api/all"
+  );
+  let data = await res.json();
+  console.log(data);
+  data.results.forEach((all) => console.log(all));
+}
+
+getData(); */
 
