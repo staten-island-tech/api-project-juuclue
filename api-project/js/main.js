@@ -15,7 +15,7 @@
         }
 
         const lala = await response.json();
-        document.querySelector(".container").textContent = lala.data;
+        document.querySelector(".container").insertAdjacentElement = lala.data;
          console.log(lala.data); 
 /*         lala.data.data.forEach((data)=> console.log(data));
         console.log(lala.data.data);  */
@@ -28,7 +28,7 @@
 }
  getData(URL);  
 
-/*function insert(data){
+function insert(data){
   data.forEach((object) => {
      DOMSelectors.container.insertAdjacentHTML(
         "afterbegin",
@@ -41,7 +41,7 @@
      )
   })
 };
-insert((getData(URL))); */
+insert(data);
 
 /* async function getData() {
   let res = await fetch(
