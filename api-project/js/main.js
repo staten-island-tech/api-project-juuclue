@@ -28,7 +28,7 @@
 }
  getData(URL);  
 
-function insert(data){
+/* function insert(data){
   data.forEach((object) => {
      DOMSelectors.container.insertAdjacentHTML(
         "afterbegin",
@@ -41,7 +41,7 @@ function insert(data){
      )
   })
 };
-insert(data);
+insert(data); */
 
 /* async function getData() {
   let res = await fetch(
