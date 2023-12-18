@@ -1,15 +1,8 @@
-/* export function setupCounter(element) {
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
-  }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
-} */
-
 const DOMSelectors = {
-    container: document.querySelector(".container"),
-    
-}
-export {DOMSelectors};
+  container: document.querySelector(".container"),
+  image: document.querySelector(".image"),
+  card: document.querySelector(".card"),
+};
+
+
+export {DOMSelectors}; 

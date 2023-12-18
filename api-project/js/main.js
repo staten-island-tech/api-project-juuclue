@@ -16,7 +16,18 @@
 
         const lala = await response.json();
         document.querySelector(".container").insertAdjacentElement = lala.data;
-         console.log(lala.data); 
+         console.log(lala); 
+         const hi = hi.data.filter((data)=> data.displayIcon);
+         hi.forEach(object => {DOMSelectors.container.insertAdjacentElement("beforeend",
+         `<div class="card">
+         <h2>${object.displayName}</h2>
+         <img src ="${object.displayIcon}" alt="" class = "image">
+         <h3>${object.description}</h3>
+ 
+         </div>`
+         
+         )});
+
 /*         lala.data.data.forEach((data)=> console.log(data));
         console.log(lala.data.data);  */
 
@@ -28,20 +39,7 @@
 }
  getData(URL);  
 
-/* function insert(data){
-  data.forEach((object) => {
-     DOMSelectors.container.insertAdjacentHTML(
-        "afterbegin",
-        `<div class="card">
-        <h2>${object.displayName}</h2>
-        <img src ="${object.displayIcon}" alt="" class = "image">
-        <h3>${object.description}</h3>
 
-        </div>`
-     )
-  })
-};
-insert(data); */
 
 /* async function getData() {
   let res = await fetch(
