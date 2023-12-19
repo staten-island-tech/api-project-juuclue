@@ -1,4 +1,4 @@
-
+import { DOMSelectors } from "./dom";
 
 
  const URL = `https://valorant-api.com/v1/agents`;
@@ -14,22 +14,21 @@
             throw new Error(response.statusText);
         }
 
-        const lala = await response.json();
-        document.querySelector(".container").insertAdjacentElement = lala.data;
-         console.log(lala); 
-         const hi = hi.data.filter((data)=> data.displayIcon);
-         hi.forEach(object => {DOMSelectors.container.insertAdjacentElement("beforeend",
-         `<div class="card">
-         <h2>${object.displayName}</h2>
-         <img src ="${object.displayIcon}" alt="" class = "image">
-         <h3>${object.description}</h3>
- 
-         </div>`
-         
-         )});
-
-/*         lala.data.data.forEach((data)=> console.log(data));
-        console.log(lala.data.data);  */
+        const object = await response.json();
+        function insert(arr){
+          arr.forEach((object) => {
+             DOMSelectors.container.insertAdjacentHTML(
+                "afterbegin",
+                `<div class="card">
+                <h2>${object.displayName}</h2>
+                <img src ="${object.displayIcon}" alt="" class = "image">
+                <h3>${object.description}</h3>
+       
+                </div>`
+             )
+          })
+       };
+       insert(object) 
 
     } catch(error) {
         console.log("error, uh oh");
