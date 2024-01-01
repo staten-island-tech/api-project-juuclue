@@ -1,0 +1,87 @@
+body,
+html,*{
+ font-size: 100%;
+ padding:0;
+ margin:0;
+ box-sizing: border-box;
+ background-color: lavenderblush;
+ font-family: 'Josefin Sans', sans-serif;
+}
+.container{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card {
+    font-size: 3rem;
+    background-color:aliceblue;
+    padding: 2%;
+    margin: 2rem;
+    border: 3px solid lavender;
+    border-radius: 15px;
+    width: 300px;
+    height: 25vh;
+}
+h3 {
+    font-size: 40%;
+}
+/* .cardtitle {
+    text-align: center;
+    background-color: beige;
+    font-size: 5rem;
+    width: 100rem;
+    margin: 6rem auto;
+    border: 3px solid lavender;
+    border-radius: 5px;
+} */
+.cardtitle {
+    font-size: 60px;
+    font-weight:bold;
+    color: #000;
+    top: 30px;
+    width: 100%;
+    min-height: 30px;
+    display: inline-block;
+    text-align: center;
+    margin: 2rem auto;
+    background-color: beige;
+    border-color: aliceblue;
+    border-radius: 5px;
+
+    }
+h2{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.searchname {
+    align-items: center;
+    text-align: center;
+    background-color:aliceblue;
+    border-radius: 3rem;
+    width:200px;
+    height: 50px;
+    border-color: azure;
+}
+.searchname:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 0.5rem pink;
+    
+}
+#submit{
+    align-items: center;
+    text-align: center;
+    background-color:aliceblue;
+    border-radius: 3rem;
+    width:200px;
+    height: 50px;
+    border-color: azure;
+}
+ 
+#submit:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 0.5rem pink;
+}
