@@ -24,7 +24,7 @@ async function getData (URL, endpoint){
   }
   catch (error) {
   console.log(error, "uhohhhhh")
-  document.querySelector("h2").textContent = "no";
+  document.querySelector("h1").textContent = "no";
 }
 }
 getData (URL, "AvailableCountries");
@@ -70,7 +70,5 @@ function clear(){
 function clearfields(){
   DOMSelectors.searchname.value = "";
 }
-function clearh2(){
-  DOMSelectors.h2.innerHTML = "";
-}
+
 
