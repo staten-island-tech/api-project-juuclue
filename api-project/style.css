@@ -85,3 +85,10 @@ h2{
     transform: translateY(-2px);
     box-shadow: 0 10px 0.5rem pink;
 }
+
+@media (max-width: 1000px) {
+  .card{
+    width: 50%;
+  }
+  
+}

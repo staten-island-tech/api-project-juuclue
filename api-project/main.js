@@ -24,7 +24,7 @@ async function getData (URL, endpoint){
   }
   catch (error) {
   console.log(error, "uhohhhhh")
-  document.querySelector("h1").textContent = "no";
+  document.querySelector("h1").textContent = "error 404";
 }
 }
 getData (URL, "AvailableCountries");
@@ -54,7 +54,7 @@ function search(){
     } 
     catch(error){
       
-    console.error(error)}}
+    console.error(error, "check spelling")}}
     lala()
     clear()
 
